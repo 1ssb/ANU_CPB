@@ -1,0 +1,35 @@
+import time
+from adafruit_circuitplayground import cp
+
+# globals
+cp.pixels.brightness = 0.1
+
+# Sound threshold for triggering the tone and pixels
+SOUND_THRESHOLD = 300
+LIGHT_THRESHOLD = 100
+NUM_PIXELS = 10
+
+while True:
+    # Read light sensor value
+    light_level = cp.light
+
+    # Update NeoPixels based on light level
+    if light_level > LIGHT_THRESHOLD:
+        for i in range(NUM_PIXELS):
+            cp.pixels[i] = (0, 255, 0)  # Green
+        time.sleep(1)
+    else:
+        for i in range(NUM_PIXELS):
+            cp.pixels[i] = (0, 0, 0)  # Do Nothing
+
+    # Read sound sensor value
+    sound_level = cp.sound_level
+
+    # If sound level exceeds threshold, play a tone
+    if sound_level > SOUND_THRESHOLD:
+        cp.play_tone(440, 0.1)  # A4 note for 0.1 seconds
+
+    # Debugging output
+    print(f"Light Level: {light_level}, Sound Level: {sound_level}")
+
+    time.sleep(0.1)
