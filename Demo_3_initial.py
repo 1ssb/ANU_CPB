@@ -1,6 +1,6 @@
 # Libraries needed for this:
-# adafruit_bus_device
-# adafruit_ahtx0.mpy
+# A folder in the library that you will need to add (this will be in the lib files and folders given to you): adafruit_bus_device (folder)
+# The make python file that will also be in the lib: adafruit_ahtx0.mpy
 
 import board
 import adafruit_ahtx0
