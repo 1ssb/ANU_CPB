@@ -1,3 +1,7 @@
+# This is an implementation of the greenhouse sensing model which shows basic signals modelling the temperature and humidity from the last 10 readings
+# These 10 values are to be updated dynamically. Remember that your board will not have enough memory to store every value, so if you incorrectly try to register and store everything,
+# it will run out of memmory and stop working. Hence, the deque is essential.
+
 import time
 import board
 import neopixel
