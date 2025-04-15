@@ -1,10 +1,10 @@
 import time
 from adafruit_circuitplayground import cp
 
-# Globals
+# Configuration
 cp.pixels.brightness = 0.1
 
-# Thresholds
+# Global Thresholds
 LIGHT_THRESHOLD = 100
 NUM_PIXELS = 10
 SHAKE_THRESHOLD = 20  # Adjust sensitivity: lower is more sensitive
