@@ -1,3 +1,6 @@
+# FSMs are a very important logivcal modelling in discrete systems. Some of you will use it without knowing that you are inherently using it.
+# I would like you to go through this in detail: https://www.freecodecamp.org/news/state-machines-basics-of-computer-science-d42855debc66/
+
 import time
 from adafruit_circuitplayground import cp
 
